@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Footer = () => {
+    let date =  new Date().getFullYear();
+
   return (
     <footer
     className='flex justify-between	mt-6 bg-slate-100 p-5 rounded-lg'
@@ -15,14 +17,14 @@ const Footer = () => {
 
         </div>
         <div>
-            <p>All Rights Reserved</p>
+            <p>All Rights Reserved thejayadad year {date}</p>
         </div>
         <div>
             <ul
             className='flex justify-between'
             >
                 <li
-                className='mr-6'
+                className='mr-4'
                 >Contact</li>
                 <li>Join Us</li>
             </ul>
