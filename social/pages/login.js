@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { signIn, useSession, signOut } from 'next-auth/react'
+import Router from 'next/router'
 
 
 const login = () => {
   const { data: session } = useSession()
+
+if(session){
+  Router.push("/")
+}
   return (
     <div className='text-center'>
       <h2>Login To Join Us</h2>

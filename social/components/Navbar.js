@@ -30,7 +30,7 @@ const Navbar = () => {
                 <button
                 className='rounded bg-amber-400	w-20 text-white hover:bg-amber-600'
                 >{session.user.name}</button>
-                 <button className=""
+                 <button className="ml-3"
           onClick={() => signOut()}>
             Logout
           </button>
