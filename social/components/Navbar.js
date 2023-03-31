@@ -1,9 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from "../public/profile.png"
+import { useSession, signOut } from 'next-auth/react'
+
 
 
 const Navbar = () => {
+  const { data: session } = useSession()
+  if(!session) return null;
   return (
     <div>
         <header>
@@ -14,14 +18,22 @@ const Navbar = () => {
                 <div
                 className='flex'
                 >
-              <Image
-              className='w-20 h-12 mr-8 bg-transparent cursor-pointer'
+              <img
+              className='w-20 h-12 mr-8 bg-transparent cursor-pointer hover:bg-amber-600'
               alt='profile'
-                src={logo}
+              width={20}
+              height={20}
+                src={
+                  session.user.image ||
+                  logo}
               />
                 <button
                 className='rounded bg-amber-400	w-20 text-white hover:bg-amber-600'
-                >Login</button>
+                >{session.user.name}</button>
+                 <button className=""
+          onClick={() => signOut()}>
+            Logout
+          </button>
                 </div>
             </nav>
         </header>
