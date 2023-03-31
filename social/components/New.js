@@ -4,7 +4,7 @@ const New = () => {
   return (
     <div>
         <form
-        className='flex justify-between mt-6 p-4 bg-gray-600 rounded-lg'
+        className='flex justify-between mt-6 p-4 bg-slate-100 rounded-lg hover:bg-slate-300'
         >
             <input
             className='w-5/6 p-4 outline-none rounded-lg bg-gray-50 m-2	'
@@ -13,9 +13,9 @@ const New = () => {
             />
             <button
             type='submit'
-            className='w-1/6 bg-gray-50	rounded-lg'
+            className='w-1/6'
             >
-                Submit
+                <i class="fas fa-plus-circle text-4xl text-green-400 hover:text-green-700"></i>
             </button>
         </form>
 
