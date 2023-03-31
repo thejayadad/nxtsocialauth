@@ -1,12 +1,12 @@
+import List from "../components/List";
+import New from "../components/New";
 
 
 export default function Home() {
   return (
     <div>
-          <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-
+        <New />
+      <List />
     </div >
   )
 }
